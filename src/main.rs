@@ -1,5 +1,3 @@
-#![feature(extract_if)]
-
 use crate::db::connection::get_connection_pool;
 use actix_cors::Cors;
 use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};

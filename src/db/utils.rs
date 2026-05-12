@@ -2,8 +2,8 @@ use crate::error::Error;
 use diesel::prelude::*;
 
 mod sql {
-    use diesel::sql_function;
-    sql_function!(fn last_insert_id() -> Unsigned<Bigint>);
+    use diesel::define_sql_function;
+    define_sql_function!(fn last_insert_id() -> Unsigned<Bigint>);
 }
 
 pub fn last_insert_id(connection: &mut MysqlConnection) -> Result<i32, Error> {
